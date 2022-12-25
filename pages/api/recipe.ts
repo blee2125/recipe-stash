@@ -9,7 +9,6 @@ export default async function recipe(
 ) {
     if (req.method === 'POST') {
         try {
-        console.log(req.body)
         await connect(uri);
         const recipeObject = new recipeModel(req.body);
         await recipeObject.save();
@@ -28,7 +27,6 @@ export default async function recipe(
         await connect(uri);
         
         const recipeObjects = await recipeModel.find({});
-//console.log(recipeObjects)
         res.status(201).json(recipeObjects);
 
         } catch (err) {
