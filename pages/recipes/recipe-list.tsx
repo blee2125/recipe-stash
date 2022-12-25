@@ -17,7 +17,7 @@ export default function RecipeList() {
 
     const mapRecipes = () => {
         const recipesArray = recipes.map(recipe => {
-            return (<p key={recipe._id}>{recipe.name}</p>)
+            return (<Link key={recipe._id} href={`${recipe._id}`}>{recipe.name}</Link>)
         })
         return recipesArray
     }
