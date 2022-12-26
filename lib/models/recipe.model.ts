@@ -3,7 +3,7 @@ import createModel from "../createModel";
 
 interface IRecipe {
     name: string;
-    ingredient: string;
+    ingredients: any[][];
     directions: string;
 }
 
@@ -11,7 +11,7 @@ type RecipeModel = Model<IRecipe, {}>;
 
 const recipeSchema = new Schema<IRecipe, RecipeModel>({
     name: String,
-    ingredient: String,
+    ingredients: <any[][]>([]),
     directions: String,
 });
 
