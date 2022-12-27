@@ -6,12 +6,8 @@ export default function AddRecipe() {
 
     return (
         <>
-          <h1>add recipe</h1>
-          <h2>
-            <Link href="/">Back to home</Link>
-          </h2>
-          
           <RecipeForm />
+          <Link href="/">Back to home</Link>
         </>
     );
 }
