@@ -51,23 +51,26 @@ const Recipe = () => {
 
   return (
     <>
-      <table>
-        <tbody>
-          <tr>
-            <td><b>Name</b></td>
-            <td>{recipe !== undefined ? recipe['name'] : ''}</td>
-          </tr>
-          <tr>
-            <td><b>Ingredients</b></td>
-          </tr>
-          {mapIng()}
-          <tr>
-            <td><b>Directions</b></td>
-          </tr>
-          {mapDir()}
-        </tbody>
-      </table>
-      <Link href="/recipes/recipe-list">Back to recipes</Link>
+      <div >
+        <h2 className='text-3xl'>{recipe !== undefined ? recipe['name'] : ''}</h2>
+        <table className="table-auto ">
+          <tbody>
+            <tr>
+              <td><b>Name</b></td>
+              <td>{recipe !== undefined ? recipe['name'] : ''}</td>
+            </tr>
+            <tr>
+              <td><b>Ingredients</b></td>
+            </tr>
+            {mapIng()}
+            <tr>
+              <td><b>Directions</b></td>
+            </tr>
+            {mapDir()}
+          </tbody>
+        </table>
+        <Link href="/recipes/recipe-list">Back to recipes</Link>
+      </div>
     </>
   )
 }
